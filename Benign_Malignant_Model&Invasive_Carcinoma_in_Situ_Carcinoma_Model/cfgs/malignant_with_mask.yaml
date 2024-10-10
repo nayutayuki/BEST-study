@@ -1,0 +1,69 @@
+task: breast usg malignant classification
+
+data:
+  data_dir: /root/workspace/TuMengJie/V2-20221125/Data
+  train_file: /root/workspace/TuMengJie/V2-20221125/DataProcess/ma_be/train.txt
+  val_file: /root/workspace/TuMengJie/V2-20221125/DataProcess/ma_be/val.txt
+  test_file: /root/workspace/TuMengJie/V2-20221125/DataProcess/ma_be/test.txt
+  external_file: /root/workspace/TuMengJie/V2-20221125/DataProcess/ma_be/external.txt
+  color_channels: 4
+  mode: gray
+  num_classes: 2
+
+train:
+  batch_size: 32
+  num_workers: 8
+  pin_memory: true
+  aug_trans:
+    trans_seq: [add_mask, fixed_resize, random_horizontal_flip, to_tensor]
+    flip_prob: 0.5
+    add_mask:
+      mode: 0
+    fixed_resize:
+      size: [299, 299]
+
+eval:
+  batch_size: 32
+  num_workers: 8
+  pin_memory: true
+  ckpt_path: None
+  aug_trans:
+    trans_seq: [add_mask, fixed_resize, to_tensor]
+    add_mask:
+      mode: 0
+    fixed_resize:
+      size: [299, 299]
+
+logging:
+  use_logging: true
+  use_tensorboard: true
+
+optim:
+  num_epochs: 200
+  optim_method: adam
+  sgd:
+    base_lr: 1e-3
+    momentum: 0.9
+    weight_decay: 5e-4
+    nesterov: false
+  adam:
+    base_lr: 1e-2
+    betas: [0.9, 0.999]
+    weight_decay: 1e-4
+    momentum: 0.9
+    amsgrad: false
+  use_lr_decay: false
+  lr_decay_method: lambda
+  cosine: None
+  warmup_cosine: None
+
+criterion:
+  criterion_method: cross_entropy
+
+network:
+  backbone: resnet50
+  model_suffix: malignant_with_mask
+  drop_prob: 0.5
+  use_parallel: false
+  seed: 22
+  num_gpus: 0
