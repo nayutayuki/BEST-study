@@ -13,18 +13,18 @@ This package requires only a standard computer with enough RAM to support the in
 #### OS Requirements
 - Linux: Ubuntu 22.04
 #### Python Dependencies
-albumentations==1.4.18
-chardet==4.0.0
-ml_collections==0.1.1
-numpy==2.1.2
-Pillow==10.4.0
-scikit_learn==1.5.2
-scipy==1.14.1
-skimage==0.0
-torch==2.3.0
-torchvision==0.18.0
-transformers==4.45.2
-
+albumentations==1.4.18  
+chardet==4.0.0  
+ml_collections==0.1.1  
+numpy==2.1.2  
+Pillow==10.4.0  
+scikit_learn==1.5.2  
+scipy==1.14.1  
+skimage==0.0  
+torch==2.3.0  
+torchvision==0.18.0  
+transformers==4.45.2  
+ 
 ## Installation Guide
 Clone the project to your local machine:  
 git clone https://github.comnayutayuki/breast_cancer_classification.git  
