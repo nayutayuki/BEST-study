@@ -6,7 +6,7 @@ EfficientNetV2 is an optimized version, which has smaller parameters than Effici
 - **BMM Model:** Distinguishes benign and malignant lesions.
 - **ICM Model:** Distinguishes invasive carcinoma from ductal carcinoma in situ.
 
-The training process for both models is the same. Breast ultrasound images were obtained from 5 hospitals, using a total of 2,792 ultrasound images for BMM (1,043 benign and 1,749 malignant) and 1,749 malignant ultrasound images for ICM (394 ductal carcinoma in situ and 1,355 invasive carcinoma). The data was divided into training, validation, and test sets in a ratio of 7:2:1. Images were preprocessed into 3×299×299, and data augmentation was performed.
+The training process for both models is the same. Breast ultrasound images were obtained from 5 hospitals, using a total of 2,792 ultrasound images for BMM (1,043 benign and 1,749 malignant) and 1,749 malignant ultrasound images for ICM (394 ductal carcinoma in situ and 1,355 invasive carcinoma). The data was divided into training, optimization, and test sets in a ratio of 7:2:1. Images were preprocessed into 3×299×299, and data augmentation was performed.
 
 The training process was 300 epochs, with a learning rate of 0.001, a weight decay rate of 0.0005, and a small batch size of 8. Dropout was applied to the last fully connected layer of the second subnet, and the drop probability was set to 0.5 to alleviate overfitting.
 
