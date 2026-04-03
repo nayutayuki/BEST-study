@@ -1,3 +1,7 @@
+# Breast Intelligent Recognition Device
+
+Back to repository root: `../README.md`
+
 ## Project Introduction
 This project aims to classify image data using deep learning techniques, primarily applied in the medical imaging field, especially in breast cancer imaging (BIRADS classification). The project adopts a multi-task learning model, incorporating various network architectures (such as EfficientNet, ResNet, etc.) and is implemented based on the PyTorch framework.
 
@@ -27,8 +31,8 @@ transformers==4.45.2
  
 ## Installation Guide
 Clone the project to your local machine:  
-git clone https://github.comnayutayuki/breast_cancer_classification.git  
-cd breast_cancer_classification  
+git clone https://github.com/nayutayuki/BEST-study.git  
+cd BEST-study/Breast_Intelligent_Recognition_Device  
 pip install -r requirements.txt   
 Installation will consume several minutes.
 

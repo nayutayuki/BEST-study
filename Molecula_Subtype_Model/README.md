@@ -1,3 +1,7 @@
+# Molecular Subtype Model (MSM)
+
+Back to repository root: `../README.md`
+
 ## Project Introduction
 
 In this project, we used ResNet18 to develop MSM to distinguish luminal A, luminal B (HER2 negative), luminal B (HER2 positive), human epidermal growth factor receptor 2 (HER2) enriched and triple negative. The data were from 4 hospitals, with a total of 9,207 breast ultrasound images, including 1,141 luminal A images, 2,095 luminal B (HER2 negative) images, 1,179 luminal B (HER2 positive) images, 912 HER2 enriched images and 1,029 triple negative images. 

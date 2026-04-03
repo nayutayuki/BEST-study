@@ -1,5 +1,7 @@
 # BMM and ICM Training Code
 
+Back to repository root: `../README.md`
+
 ## Project Description
 EfficientNetV2 is an optimized version, which has smaller parameters than EfficientNet, better parameter efficiency, and faster training speed. In this study, EfficientNetV2 was used to develop two binary classification models:
 
